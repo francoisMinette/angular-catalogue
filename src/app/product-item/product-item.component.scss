@@ -1,0 +1,17 @@
+.show-container {
+  display: inline-flex;
+  max-width: 220px;
+  padding: 10px;
+  flex-direction: column;
+
+  .summary {
+    padding-top: 10px;
+    width: 100%;
+    display: inline-block;
+    max-height: 100px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}

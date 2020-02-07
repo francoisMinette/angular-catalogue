@@ -1,0 +1,14 @@
+<div class="top-bar">
+  <a [routerLink]="['/']">
+    <h1>TV show list</h1>
+  </a>
+
+  <div class="select-genre">
+    <select (change)="filterGenre($event.target.value)">
+      <option value="All">All</option>
+      <option *ngFor="let genre of genres" value={{genre}}>
+        {{genre}}
+      </option>
+    </select>
+  </div>
+</div>

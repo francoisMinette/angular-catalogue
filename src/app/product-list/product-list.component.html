@@ -1,0 +1,5 @@
+<app-top-bar (messageEvent)="receiveMessage($event)" [genres]=genres></app-top-bar>
+
+<div class="show-list-wrapper">
+  <app-product-item *ngFor="let show of list" [rating]=show.rating.average [name]=show.name [image]=show.image.medium [summary]=show.shortSummary [selectedGenre]=selectedGenre [genres]=show.genres></app-product-item>
+</div>
