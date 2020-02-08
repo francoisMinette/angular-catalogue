@@ -1,5 +1,25 @@
-<app-top-bar (messageEvent)="receiveMessage($event)" [genres]=genres></app-top-bar>
+<div class="loading-container" [ngClass]="{ hidden: !this.isLoading }">
+	<i class="material-icons">sync</i>
+</div>
 
-<div class="show-list-wrapper">
-  <app-product-item *ngFor="let show of list" [rating]=show.rating.average [name]=show.name [image]=show.image.medium [summary]=show.shortSummary [selectedGenre]=selectedGenre [genres]=show.genres></app-product-item>
+<app-top-bar
+	[ngClass]="{ hidden: this.isLoading }"
+	(selectGenreEvent)="updateSelectedGenre($event)"
+	(sortByEvent)="updateSortBy($event)"
+	(orderByEvent)="updateOrderBy($event)"
+	(filterIsEndedEvent)="updateIsEnded($event)"
+	[genres]="genres"
+></app-top-bar>
+
+<div class="show-list-wrapper" [ngClass]="{ hidden: this.isLoading }">
+	<app-product-item
+		*ngFor="let show of list"
+		[rating]="show.rating.average"
+		[name]="show.name"
+		[image]="show.image.medium"
+		[summary]="show.shortSummary"
+		[selectedGenre]="selectedGenre"
+		[premiered]="show.premiered"
+		[genres]="show.genres"
+	></app-product-item>
 </div>

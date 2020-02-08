@@ -1,14 +1,30 @@
 <div class="top-bar">
-  <a [routerLink]="['/']">
-    <h1>TV show list</h1>
-  </a>
+	<div class="select-container">
+		<label>Genre :</label>
+		<select (change)="filterGenre($event.target.value)">
+			<option value="All">All</option>
+			<option *ngFor="let genre of genres" value="{{ genre }}">
+				{{ genre }}
+			</option>
+		</select>
+	</div>
 
-  <div class="select-genre">
-    <select (change)="filterGenre($event.target.value)">
-      <option value="All">All</option>
-      <option *ngFor="let genre of genres" value={{genre}}>
-        {{genre}}
-      </option>
-    </select>
-  </div>
+	<div class="select-container">
+		<label>Sort by :</label>
+		<select (change)="sortBy($event.target.value)">
+			<option value="0"></option>
+			<option *ngFor="let sortOption of sortByOptions" value="{{ sortOption }}">
+				{{ sortOption }}
+			</option>
+		</select>
+	</div>
+
+	<div class="order-container">
+		<div class="icon-wrapper" [ngClass]="getMyClasses('desc')">
+			<i class="material-icons" (click)="orderBy('desc')">keyboard_arrow_down</i>
+		</div>
+		<div class="icon-wrapper" [ngClass]="getMyClasses('asc')">
+			<i class="material-icons" (click)="orderBy('asc')">keyboard_arrow_up</i>
+		</div>
+	</div>
 </div>

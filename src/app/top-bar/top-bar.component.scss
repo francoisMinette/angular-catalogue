@@ -1,17 +1,45 @@
 .top-bar {
-  width: 100%;
-  height: 68px;
-  background-color: #1976d2;
-  padding: 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-  text-decoration: none;
+	height: 68px;
+	background-color: #1976d2;
+	padding: 16px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: #fff;
+	text-decoration: none;
 
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
+	.select-container,
+	.order-container {
+		margin-right: 15px;
+	}
+
+	.order-container {
+		.icon-wrapper {
+			display: inline-flex;
+			width: 30px;
+			height: 30px;
+			border-radius: 30px;
+			border: 1px solid transparent;
+			text-align: center;
+			margin: auto;
+			padding: 10px;
+
+			&:first-of-type {
+				margin-right: 7px;
+			}
+
+			i {
+				margin: auto;
+			}
+
+			&:hover {
+				background-color: #6eaeef;
+				cursor: pointer;
+			}
+
+			&.selected {
+				border-color: #fff;
+			}
+		}
+	}
 }

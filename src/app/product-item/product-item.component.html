@@ -1,9 +1,8 @@
 <div class="show-container" [ngClass]="getMyClasses()">
-  <h3>
-    {{ name }} ({{ rating }})
-  </h3>
-  <img [src]="image">
-  <div class="summary">
-    {{ summary }}
-  </div>
+	<h3>{{ name }} ({{ rating }})</h3>
+	<img [src]="image" />
+	<div class="summary">
+		<p>From : {{ premiered }}</p>
+		{{ summary }}
+	</div>
 </div>
