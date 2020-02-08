@@ -1,11 +1,16 @@
 <div class="header">
 	<a [routerLink]="['/']">
-		<h1>TV show list</h1>
+		<h1>{{ 'home' | translate }}</h1>
 	</a>
 	<a [routerLink]="['/about-us']">
-		<h1>About us</h1>
+		<h1>{{ 'about_us' | translate }}</h1>
 	</a>
 	<a [routerLink]="['/expectations']">
-		<h1>Expectations</h1>
+		<h1>{{ 'expectations' | translate }}</h1>
 	</a>
+
+	<div class="lang-bar">
+		<a (click)="changeLang('en')">EN</a>
+		<a (click)="changeLang('fr')">FR</a>
+	</div>
 </div>
