@@ -1,5 +1,8 @@
 {
 	"home": "Home",
 	"about_us": "About us",
-	"expectations": "Expectations"
+	"expectations": "Expectations",
+	"genre": "genre",
+	"all": "all",
+	"sort_by": "sort by"
 }

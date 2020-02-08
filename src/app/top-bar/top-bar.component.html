@@ -1,8 +1,8 @@
 <div class="top-bar">
 	<div class="select-container">
-		<label>Genre :</label>
+		<label>{{ 'genre' | translate }} :</label>
 		<select (change)="filterGenre($event.target.value)">
-			<option value="All">All</option>
+			<option value="All">{{ 'all' | translate }}</option>
 			<option *ngFor="let genre of genres" value="{{ genre }}">
 				{{ genre }}
 			</option>
@@ -10,7 +10,7 @@
 	</div>
 
 	<div class="select-container">
-		<label>Sort by :</label>
+		<label>{{ 'sort_by' | translate }} :</label>
 		<select (change)="sortBy($event.target.value)">
 			<option value="0"></option>
 			<option *ngFor="let sortOption of sortByOptions" value="{{ sortOption }}">
