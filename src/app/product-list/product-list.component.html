@@ -8,6 +8,7 @@
 	(sortByEvent)="updateSortBy($event)"
 	(orderByEvent)="updateOrderBy($event)"
 	(filterIsEndedEvent)="updateIsEnded($event)"
+	(searchEvent)="updateSeach($event)"
 	[genres]="genres"
 ></app-top-bar>
 
@@ -15,11 +16,12 @@
 	<app-product-item
 		*ngFor="let show of list"
 		[rating]="show.rating.average"
-		[name]="show.name"
+		[name]="show.name.toLowerCase()"
 		[image]="show.image.medium"
 		[summary]="show.shortSummary"
 		[selectedGenre]="selectedGenre"
 		[premiered]="show.premiered"
 		[genres]="show.genres"
+		[search]="search"
 	></app-product-item>
 </div>

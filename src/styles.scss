@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+	font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+	letter-spacing: 0.2px;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
 .hidden {
 	display: none !important;
 }

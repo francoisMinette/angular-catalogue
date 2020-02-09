@@ -1,8 +1,18 @@
 {
-	"home": "Home",
-	"about_us": "About us",
-	"expectations": "Expectations",
+	"home": "home",
+	"about_us": "about",
+	"expectations": "expectations",
 	"genre": "genre",
 	"all": "all",
-	"sort_by": "sort by"
+	"sort_by": "sort by",
+	"about-me-1": "My name is Francois, I live in Riga but I come from the western side of France. I am a frontend developer. I mainly use javascript language but I have used others such as C C++ C# php and more. I would like to expend my knowledge on javascript but also in frontend developement in general.",
+	"about-me-2": "I usualy spend my free time with my family. We like watching tv-shows, playing video games. I also like history, I read historical books and watch movies based on history.",
+	"about-me-3": "When not with my family I also spend time with the few friends I made here in Latvia, we also play video games but also board games and watch movies.",
+	"about-me-4": "I used to do a lot of sport when I was younger but due to a physical condition I cannot do as much anymore. I still run or cycle from time to time though.",
+	"about-me-5": "Finally, I like music, I listen to progressive rock and metal, I had the chance to go to the hellfest festival in france 2 times in a row. Though I don't listen this kind only, I like pop rock, electro as well but I am also open to anything in general",
+	"expectations-1": "I like to work in quiet place. I usualy am most productive in the early hours of the day when the office or open space is almost empty.",
+	"expectations-2": "Though that does not mean that I am not communicative. Communication is in my opinion the key to success in most project. If I spend too much time on a task because I do not manage to do it, then I will ask other frontenders.",
+	"expectations-3": "Another important point is I think, to have a well described task when it is given to a developer. All the points must be as clear as possible.",
+	"expectations-4": "If a task is major and expected to be done in more than 2 days, I like in general to split this task in smaller ones that can be done independantly.",
+	"expectations-5": "I also like to know who does what in the team I work with. If I have any question and I know team mates that may be able to answer that will be helpful."
 }

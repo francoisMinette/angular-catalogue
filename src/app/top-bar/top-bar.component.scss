@@ -1,7 +1,6 @@
 .top-bar {
-	height: 68px;
 	background-color: #1976d2;
-	padding: 16px;
+	padding: 20px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -11,6 +10,32 @@
 	.select-container,
 	.order-container {
 		margin-right: 15px;
+	}
+
+	.search-bar-container {
+		display: inline-flex;
+		margin-right: 15px;
+
+		i,
+		input {
+			border: 1px solid #717171;
+		}
+
+		i {
+			background-color: white;
+			border-right: none;
+			color: #717171;
+			border-radius: 7px 0px 0px 7px;
+		}
+
+		input {
+			border-radius: 0px 7px 7px 0px;
+			border-left: none;
+
+			&:focus {
+				outline: none;
+			}
+		}
 	}
 
 	.order-container {

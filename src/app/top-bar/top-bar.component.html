@@ -1,6 +1,16 @@
 <div class="top-bar">
+	<div class="search-bar-container">
+		<i class="material-icons">search</i>
+		<input
+			type="text"
+			name="search-bar"
+			(keyup)="searchShow($event.target.value)"
+			placeholder="Search by name"
+		/>
+	</div>
+
 	<div class="select-container">
-		<label>{{ 'genre' | translate }} :</label>
+		<label class="capitalize">{{ 'genre' | translate }} :</label>
 		<select (change)="filterGenre($event.target.value)">
 			<option value="All">{{ 'all' | translate }}</option>
 			<option *ngFor="let genre of genres" value="{{ genre }}">
@@ -10,7 +20,7 @@
 	</div>
 
 	<div class="select-container">
-		<label>{{ 'sort_by' | translate }} :</label>
+		<label class="capitalize">{{ 'sort_by' | translate }} :</label>
 		<select (change)="sortBy($event.target.value)">
 			<option value="0"></option>
 			<option *ngFor="let sortOption of sortByOptions" value="{{ sortOption }}">
@@ -20,11 +30,11 @@
 	</div>
 
 	<div class="order-container">
-		<div class="icon-wrapper" [ngClass]="getMyClasses('desc')">
-			<i class="material-icons" (click)="orderBy('desc')">keyboard_arrow_down</i>
+		<div class="icon-wrapper" [ngClass]="getMyClasses('desc')" (click)="orderBy('desc')">
+			<i class="material-icons">keyboard_arrow_down</i>
 		</div>
-		<div class="icon-wrapper" [ngClass]="getMyClasses('asc')">
-			<i class="material-icons" (click)="orderBy('asc')">keyboard_arrow_up</i>
+		<div class="icon-wrapper" [ngClass]="getMyClasses('asc')" (click)="orderBy('asc')">
+			<i class="material-icons">keyboard_arrow_up</i>
 		</div>
 	</div>
 </div>

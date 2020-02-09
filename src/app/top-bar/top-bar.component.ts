@@ -11,10 +11,12 @@ export class TopBarComponent {
 	@Output() sortByEvent = new EventEmitter<string>();
 	@Output() orderByEvent = new EventEmitter<string>();
 	@Output() filterIsEndedEvent = new EventEmitter<string>();
+	@Output() searchEvent = new EventEmitter<string>();
 	sortByOptions = ['Rating', 'Premiered'];
 	orderByVal = 'desc';
 	sortByVal;
 	isEndedVal;
+	searchFunc;
 
 	constructor() {}
 
@@ -36,8 +38,8 @@ export class TopBarComponent {
 		}
 	}
 
+	// TODO
 	filterIsEnded(filterVal: any) {
-		console.log('filterIsEnded', filterVal);
 		if (this.isEndedVal !== filterVal) {
 			this.isEndedVal = filterVal;
 			this.filterIsEndedEvent.emit(filterVal);
@@ -51,5 +53,17 @@ export class TopBarComponent {
 		};
 
 		return classes;
+	}
+
+	searchShow(inputValue) {
+		console.log('in searchShow', inputValue);
+		if (this.searchFunc) {
+			clearTimeout(this.searchFunc);
+		}
+
+		// Will search 200ms after the last keyup event
+		this.searchFunc = setTimeout(() => {
+			this.searchEvent.emit(inputValue);
+		}, 200);
 	}
 }

@@ -10,6 +10,7 @@ export class ProductListComponent {
 	list;
 	orderBy = 'desc';
 	selectedGenre = 'All';
+	search = '';
 	sortBy = '0';
 	isEnded = 2;
 	genres = [];
@@ -41,29 +42,12 @@ export class ProductListComponent {
 				prepareData(response);
 			},
 			error => {
-				console.error(error);
-
+				// If problem to reach the api, load local asset
 				this.http.get<any[]>('assets/shows.json').subscribe(response => {
 					prepareData(response);
 				});
 			}
 		);
-	}
-
-	loadingContainerClasses() {
-		const classes = {
-			hidden: !this.isLoading,
-		};
-
-		return classes;
-	}
-
-	ListWrapperClasses() {
-		const classes = {
-			hidden: this.isLoading,
-		};
-
-		return classes;
 	}
 
 	orderList() {
@@ -89,8 +73,6 @@ export class ProductListComponent {
 
 			return res;
 		});
-
-		console.log('updateSortBy', this.sortBy, this.list, this.orderBy);
 	}
 
 	updateSortBy(event) {
@@ -107,7 +89,12 @@ export class ProductListComponent {
 		this.selectedGenre = event;
 	}
 
+	// TODO
 	updateIsEnded(event) {
 		this.isEnded = event;
+	}
+
+	updateSeach(event) {
+		this.search = event.toLowerCase();
 	}
 }
