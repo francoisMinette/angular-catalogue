@@ -1,0 +1,56 @@
+.content {
+	padding: 50px 100px;
+	background-color: #1976d2;
+	margin: 60px auto;
+	border-radius: 20px;
+
+	.story-container {
+		display: flex;
+		flex-direction: row;
+
+		.story-element {
+			display: inline-flex;
+			flex: 50%;
+
+			&.text {
+				vertical-align: middle;
+
+				p {
+					vertical-align: middle;
+					text-align: justify;
+					display: block;
+					margin: auto;
+					color: #fff;
+					padding: 20px 100px;
+					font-size: 1.4em;
+				}
+			}
+
+			&.img {
+				background-size: 100%;
+				background-position: middle center;
+				height: 321px;
+
+				&.about-me {
+					background-image: url('/../assets/images/about-me.png');
+				}
+
+				&.family {
+					background-image: url('/../assets/images/family.jpg');
+				}
+
+				&.movies {
+					background-image: url('/../assets/images/movies.jpg');
+				}
+
+				&.running {
+					background-image: url('/../assets/images/running.jpg');
+				}
+
+				&.music {
+					background-image: url('/../assets/images/music.jpg');
+				}
+			}
+		}
+	}
+}
