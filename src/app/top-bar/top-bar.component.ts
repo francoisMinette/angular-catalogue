@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
 	selector: 'app-top-bar',
@@ -18,7 +19,9 @@ export class TopBarComponent {
 	isEndedVal;
 	searchFunc;
 
-	constructor() {}
+	constructor(private translate: TranslateService) {
+		this.translate = translate;
+	}
 
 	filterGenre(filterVal: any) {
 		this.selectGenreEvent.emit(filterVal);

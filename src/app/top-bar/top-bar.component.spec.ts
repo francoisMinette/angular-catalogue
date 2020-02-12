@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TopBarComponent } from './top-bar.component';
+import { TranslateTestingModule } from './../translate-testing/translate-testing.module';
 
 describe('TopBarComponent', () => {
 	let component: TopBarComponent;
@@ -8,6 +9,7 @@ describe('TopBarComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
+			imports: [TranslateTestingModule],
 			declarations: [TopBarComponent],
 		}).compileComponents();
 	}));

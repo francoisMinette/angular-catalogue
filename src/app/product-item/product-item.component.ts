@@ -6,14 +6,14 @@ import { Component, Input, OnInit } from '@angular/core';
 	styleUrls: ['./product-item.component.scss'],
 })
 export class ProductItemComponent implements OnInit {
-	@Input() name: string;
-	@Input() rating: number;
-	@Input() image: string;
-	@Input() summary: string;
-	@Input() selectedGenre: string;
-	@Input() premiered: string;
-	@Input() search: string;
-	@Input() genres: Array<string>;
+	@Input() name: string = '';
+	@Input() rating: number = null;
+	@Input() image: string = '';
+	@Input() summary: string = '';
+	@Input() selectedGenre: string = '';
+	@Input() premiered: string = '';
+	@Input() search: string = '';
+	@Input() genres: Array<string> = [];
 
 	ngOnInit(): void {}
 

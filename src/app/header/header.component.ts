@@ -6,17 +6,13 @@ import { TranslateService } from '@ngx-translate/core';
 	templateUrl: './header.component.html',
 	styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 	constructor(private translate: TranslateService) {
-		translate.addLangs(['en', 'fr']);
-		translate.setDefaultLang('en');
-		translate.use('en');
+		this.translate = translate;
 	}
 
 	changeLang(lang: string) {
 		console.log('in changeLang', lang);
 		this.translate.use(lang);
 	}
-
-	ngOnInit(): void {}
 }

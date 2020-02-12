@@ -4,7 +4,9 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateService } from '@ngx-translate/core';
 
+// import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -47,7 +49,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 			{ path: 'expectations', component: ExpectationsComponent },
 		]),
 	],
-	providers: [],
+	providers: [TranslateService],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}
